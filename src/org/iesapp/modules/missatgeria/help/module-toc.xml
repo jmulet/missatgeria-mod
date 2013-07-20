@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN"
+                     "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+
+<toc version="2.0">
+    <tocitem text="Mòdul Informació Tutors" mergetype="javax.help.SortMerge">
+            <tocitem text="Contestar una sol·licitud" target="org-iesapp-modules-missatgeria"/>
+            <tocitem text="Reenviar una sol·licitud" target="org-iesapp-modules-missatgeria-reenviar"/>
+    </tocitem>
+</toc>

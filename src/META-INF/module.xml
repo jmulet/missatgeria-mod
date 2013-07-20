@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+    <module jar="org-iesapp-modules-missatgeria.jar" class="org.iesapp.modules.missatgeria.MissatgeriaModule" autoStart="onDemand" multipleInstance="no" closable="yes">
+        <deamons>
+		<deamon class="org.iesapp.modules.missatgeria.MissatgeriaDeamon" timeInMillis="60000" showMessage="yes" activateIcon="yes" activateModule="no" enabled="false"/>
+	</deamons>
+        <anchor location="menu" parentId="jMenuModules"/>
+        <anchor location="toolbar" parentId="jToolBarModules"/>
+        <display location="topwindow" parentId="center"/>
+        <bundle>
+            <locale key="title" value="ca"><![CDATA[Informació tutors]]></locale>
+            <locale key="title" value="es"><![CDATA[Información tutores]]></locale>  
+            <locale key="title" value="default"><![CDATA[Tutor information]]></locale>
+            <locale key="description" value="default"><![CDATA[This module allows communication among tutors and teachers]]></locale>       
+        </bundle>
+         <initialization>
+             <parameter key="tabPlacement" type="String">
+                 <value><![CDATA[Top]]></value> 
+                 <description><![CDATA[Where to place tabs?]]></description>
+             </parameter>
+        </initialization>   
+        <metaINF author="Josep Mulet (c) 2012" version="1.3" dependencies=""/>
+    </module>    
+</root>
