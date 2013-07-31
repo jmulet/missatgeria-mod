@@ -5,13 +5,13 @@
 package org.iesapp.modules.missatgeria;
 
 import java.util.HashMap;
-import org.iesapp.framework.pluggable.deamons.TopModuleDeamon;
+import org.iesapp.framework.pluggable.daemons.TopModuleDaemon;
 
 /**
  *
  * @author Josep
  */
-public class MissatgeriaDeamon extends org.iesapp.framework.pluggable.deamons.TopModuleDeamon {
+public class MissatgeriaDeamon extends org.iesapp.framework.pluggable.daemons.TopModuleDaemon {
 
     private int solPendents = 0;
     private String message;
@@ -23,12 +23,12 @@ public class MissatgeriaDeamon extends org.iesapp.framework.pluggable.deamons.To
             if(solPendentsNew>0)
             {
                  message = "Teniu "+solPendentsNew+" sol·licituds pendents.";
-                 status = TopModuleDeamon.STATUS_AWAKE;
+                 status = TopModuleDaemon.STATUS_AWAKE;
             }
             else
             {
                  message = "";
-                 status = TopModuleDeamon.STATUS_NORMAL;
+                 status = TopModuleDaemon.STATUS_NORMAL;
             }
 
             if(solPendents!=solPendentsNew)
@@ -49,7 +49,7 @@ public class MissatgeriaDeamon extends org.iesapp.framework.pluggable.deamons.To
     public void reset() {
        message = "";
        int newsolPendents = 0;
-       status = TopModuleDeamon.STATUS_NORMAL;
+       status = TopModuleDaemon.STATUS_NORMAL;
        this.propertyChangeSupport.firePropertyChange("solpendents",newsolPendents,solPendents);
        solPendents = 0;
        
